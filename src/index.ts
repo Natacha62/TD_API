@@ -19,6 +19,5 @@ app.get('/', (req: Request, res: Response) => {
 app.use('/users', userRoutes);
 // Démarrage du serveur sur le port défini
 app.listen(PORT, () => {
- console.log(`✅ Serveur démarré sur http://localhost:${PORT}`); 
- // Message de confirmation dans la console
+ console.log(`✅ Serveur démarré sur http://localhost:${PORT}`); // Message de confirmation dans la console
 });

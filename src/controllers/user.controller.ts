@@ -5,19 +5,12 @@ export const getUsers = (req: Request, res: Response) => {
 };
 
 export const addUser = (req: Request, res: Response) => {
-  const { name, email } = req.body;
-  console.log("Corps reçu :", req.body);
+ const { name, email } = req.body;
 
-  if (!name || !email) {
-    return res.status(400).json({ message: "Nom et email requis" });
-  }
-
-  const newUser = { name, email };
-  users.push(newUser);
-  console.log("🛠 Utilisateur ajouté :", newUser);
-
-  res.status(201).json({
-    message: `Utilisateur ${name} ajouté avec succès !`,
-    user: newUser
-  });
+ if (!name || !email) {
+ return res.status(400).json({ message: "Nom et email requis" });
+ }
+ users.push({ name, email }); // Ajout en mémoire
+ console.log("🛠 Utilisateur ajouté :", { name, email });
+ res.json({ message: `Utilisateur ${name} ajouté avec succès !`, email });
 };
