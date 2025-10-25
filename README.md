@@ -44,6 +44,7 @@ Le serveur démarre sur : http://localhost:4000
 ## Structure du projet
 
 Voici l'arborescence du projet
+
 ![Structure du projet](./image/structure_du_projet.png)
 
 ## Description des routes
