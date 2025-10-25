@@ -19,7 +19,7 @@ Initialisation du projet Node.js :
 npm init -y
 ```
 
-Intallation des dépendances :
+Installation des dépendances :
 
 ```bash
 npm install express dotenv
@@ -41,15 +41,29 @@ npm run dev
 
 Le serveur démarre sur : http://localhost:4000
 
+## Description des routes
+
+### GET /users
+
+- **Objectif** : Récupérer la liste des utilisateurs.
+- **Méthode** : GET
+- **URL** : http://localhost:4000/users
+
+### POST /users
+
+- **Objectif** : Ajouter un nouvel utilisateur.
+- **Méthode** : POST
+- **URL** : http://localhost:4000/users
+
 ## Test et démonstration
 
 ### Postman
 
-L'image montre le résultat de la requête GET dans Postman quand il n'y a pas de donnée dans l'API.
-![Alt text](./image/Postman-GET.png)
+#### 1. GET /users (avant ajout)
+![GET initial](./image/Postman-GET.png)
 
-L'image montre le résultat de la requête POST dans Postman quand on ajoute des données dans l'API.
-![Alt.text](./image/Postman_POST.png)
+#### 2. POST /users
+![POST utilisateur](./image/Postman_POST.png)
 
-L'image montre le résultat de la requête GET dans Postman après avoir insérer des données avec POST dans l'API.
-![Alt.text](./image/Postman_GET_apres_POST.png)
+#### 3. GET /users (après ajout)
+![GET après ajout](./image/Postman_GET_apres_POST.png)
